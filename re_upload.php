@@ -20,7 +20,7 @@
             width: 300px;
             margin: 20px auto;
             padding: 20px;
-            border:1px solid #ccc;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -28,10 +28,13 @@
  <h1 class="header">檔案上傳練習</h1>
  <!----建立你的表單及設定編碼----->
 <form action="update_img.php" method="post" enctype="multipart/form-data">
-<input type="file" name="img" id="file">
-<input type="text" name="name" id="name">
-<input type="submit" value="上傳">
+ <input type="file" name="img" id="file">
+ <input type="hidden" name="imgName" value="<?=$_GET['file'];?>">
+ <input type="text" name="name" id="name">
+ <input type="submit" value="上傳">
+
 </form>
+
 
 
 
